@@ -124,55 +124,6 @@ body {
     background-image: url(../img/Maika-Veggies-Burgers-1024x576.jpg);
   }
 }
-.galeria__texto1 {
-  font-size: 1em;
-}
-
-.galeria__texto2 {
-  font-size: 2em;
-}
-
-.galeria__texto3 {
-  font-size: 3em;
-}
-
-.color-red {
-  border-color: red;
-  color: red;
-  background-color: red;
-  text-shadow: 5px 5px 5px #fff;
-  border: 2px solid;
-}
-
-.color-blue {
-  border-color: blue;
-  color: blue;
-  background-color: blue;
-  text-shadow: 5px 5px 5px #fff;
-  border: 2px solid;
-}
-
-.color-orange {
-  border-color: orange;
-  color: orange;
-  background-color: orange;
-  text-shadow: 5px 5px 5px #fff;
-  border: 2px solid;
-}
-
-/*Creamos el bucle para usar los valores del mapa*/
-.link--red1 {
-  background-color: red;
-}
-
-.link--red2 {
-  background-color: blue;
-}
-
-.link--red3 {
-  background-color: orange;
-}
-
 .inpt input {
   padding: 10px;
   margin: 20px;

@@ -97,49 +97,6 @@ body {
     } 
 }
 
-// TIENDA//
-
-// FOR
-
-@for $i from 1 through 3 {
-    .galeria__texto#{$i} {
-    font-size: $i * 1em;
-  }
-}
-
-// EACH
-
-$colores: red , blue , orange;
-
-@each $color in $colores {
-    .color-#{$color} {
-      border-color: $color;
-      color: $color;
-      background-color: $color;
-      text-shadow: 5px 5px 5px #fff;
-      border: 2px solid;
-    }
-}
-
-// MAPAS
-
-//maps - incio
-
-$redes: ( /*Declaramos nuestro mapa*/
-red1: red,
-red2:  blue,
-red3: orange
-); 
-/*Creamos el bucle para usar los valores del mapa*/
-@each $red, $color in $redes {
-.link--#{$red} {
-background-color: $color;
-}
-}
-
-
-//   FIN
-
 .inpt input {
     padding: 10px;
     margin: 20px;   
