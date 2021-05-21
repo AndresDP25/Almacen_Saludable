@@ -1,0 +1,248 @@
+
+* {
+    @include reset-pm;
+}
+
+body {
+    background: $bg-body;
+    font-family: $font-family;
+}
+
+.navbar {
+    background:  $bg-nav;
+    box-shadow: 0 2px 4px 0 rgba(0, 0,0,0.5);
+    min-height: 100px;
+    .navbar__img {
+        min-width: 160px;
+        max-width: 180px;
+        border-radius: 66px;
+        margin: 10px;
+        vertical-align: middle;
+        animation-name: giro;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes giro {
+        0% {
+            transform: rotate(0);  
+        }
+        30% {
+            transform: rotate(35deg);
+        }
+        70% {
+            transform: rotate(-35deg);
+        }
+    }
+    .navbar-toggler {
+        font-size: 40px;
+        box-shadow: 0 0 4px 0 rgba(0, 0,0,0.5);
+        &:focus {
+            outline: none;
+        }
+        &:hover{
+            color: red;
+            box-shadow: 0 0 20px 0 rgba(0, 0,0,0.5);
+        } 
+    }
+    .navbar-collapse {
+        .navbar-nav {
+            .nav-link {
+                color: $font-color;
+                font-size: 20px;
+                text-decoration: none;
+                box-shadow: 0 0 4px 0 rgba(0, 0,0,0.5);
+                margin: 10px;
+                padding: 10px;
+                &:hover{
+                    color: red;
+                    box-shadow: 0 0 20px 0 rgba(0, 0,0,0.5);
+                } 
+            }
+        }
+    }
+}
+
+
+.contenedor_mobile {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    .carousel{
+        display: none;
+    }
+    .contenedor_mobile {
+        display: block;
+        text-align: center;
+        margin-top: 98px;
+    
+        .contenedor_mobile-image {
+
+            @include contenedorMobile-Img;
+            background-image: url(../Img/Frutos-Secos_Slide.jpg);
+        }
+            
+        .contenedor_mobile-image2 {
+
+            @include contenedorMobile-Img;
+            background-image: url(../img/legumbres.jpeg);
+            
+        }
+        .contenedor_mobile-image3 {
+            @include contenedorMobile-Img;
+            background-image: url(../img/Maika-Veggies-Burgers-1024x576.jpg);
+            
+        }
+        
+    } 
+}
+
+// TIENDA//
+
+// FOR
+
+@for $i from 1 through 3 {
+    .galeria__texto#{$i} {
+    font-size: $i * 1em;
+  }
+}
+
+// EACH
+
+$colores: red , blue , orange;
+
+@each $color in $colores {
+    .color-#{$color} {
+      border-color: $color;
+      color: $color;
+      background-color: $color;
+      text-shadow: 5px 5px 5px #fff;
+      border: 2px solid;
+    }
+}
+
+// MAPAS
+
+//maps - incio
+
+$redes: ( /*Declaramos nuestro mapa*/
+red1: red,
+red2:  blue,
+red3: orange
+); 
+/*Creamos el bucle para usar los valores del mapa*/
+@each $red, $color in $redes {
+.link--#{$red} {
+background-color: $color;
+}
+}
+
+
+//   FIN
+
+.inpt input {
+    padding: 10px;
+    margin: 20px;   
+}
+
+.boton--verde {
+	background: #7BA771;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background: #437837;
+    }
+}
+
+
+
+.principal {
+    .principal__ul {
+        font-weight: $font-bold;
+        color: red;
+    }
+    .principal__article{
+        height: 500px;
+        overflow:auto;
+        padding: 10px;
+        background: $bg-article;
+        border-radius: 10px;  
+        .principal__titulo {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .principal__texto{
+            font-size: $font-size; 
+            margin-bottom: 20px;
+        }
+        .principal_iframe {
+            width: 246px;
+            height: 180px; 
+        }
+    }
+}
+
+
+.productosTienda{
+    .productosTienda__titulo {
+        text-transform: uppercase;
+        color: $bg-nav;
+        font-family: $font-family;
+    }
+    .productosTienda__imagenes {
+        padding: 20px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    }
+}
+
+.tabla {
+    .tabla__titulo {
+        @include itemsCentrados;
+    }
+    .table {
+        @include itemsCentrados;
+    }
+}
+
+
+/* FOOTER */
+
+footer {
+    background: $bg-nav;
+    text-align: center;
+    box-shadow: $box-shadow;
+    }
+    
+    
+    footer p {
+        font-size: $font-size;
+        margin: 10px;
+        color: #fff;
+        border-right: solid 1px white;
+        padding: 20px;
+    }
+
+
+/* MAIN TIENDA */
+
+.recetas {
+    .recetas__enlace {
+        @include fontStyle;
+    }
+}
+
+
+/* MAIN CARRITO */
+
+main.carrito {
+    height: 65vh;
+    
+}
+
+
+
+
+

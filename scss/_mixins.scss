@@ -1,0 +1,40 @@
+@mixin reset-pm {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin fontStyle {
+    font-size: 2rem;
+    color: $font-color;
+    font-family: $font-family;  
+    text-decoration: none; 
+}
+
+@mixin btn-propio($background-color, $color, $bold){
+    background-color: $background-color;
+    color: $color;
+    border-radius: 50px;
+    padding: 20px 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin contenedorMobile-Img {
+    
+    width: 100%;
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+
+}
+
+@mixin itemsCentrados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center    
+}
