@@ -79,7 +79,7 @@ body {
         .contenedor_mobile-image {
 
             @include contenedorMobile-Img;
-            background-image: url(../Img/Frutos-Secos_Slide.jpg);
+            background-image: url(../img/mejoresfrutossecos-t.jpg);
         }
             
         .contenedor_mobile-image2 {
@@ -89,6 +89,7 @@ body {
             
         }
         .contenedor_mobile-image3 {
+            
             @include contenedorMobile-Img;
             background-image: url(../img/Maika-Veggies-Burgers-1024x576.jpg);
             
