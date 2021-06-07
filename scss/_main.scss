@@ -179,7 +179,6 @@ footer {
         font-size: $font-size;
         margin: 10px;
         color: #fff;
-        border-right: solid 1px white;
         padding: 20px;
     }
 
@@ -196,9 +195,22 @@ footer {
 /* MAIN CARRITO */
 
 main.carrito {
-    height: 65vh;
+    height: 95vh;
     
 }
+
+/* MAIN CONTACTO */
+
+.formulario {
+    @include itemsCentrados;
+    .check {
+        width: 20px;
+    }
+}
+
+
+
+
 
 
 
